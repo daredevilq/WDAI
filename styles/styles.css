@@ -12,7 +12,7 @@ body{
 }
 :root{
     --color-primary: #191d2b;
-    --color-secondary: #491dc2;                             /* setting dark mode */
+    --color-secondary: #491dc2;
     --color-white: #FFFFFF;
     --box-shadow-1: 0 3px 15px rgba(0,0,0,0.7);
 }
@@ -167,6 +167,7 @@ a{
         display: flex;
         padding-right: 10rem;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
 
     .text{
@@ -238,10 +239,15 @@ a{
 
 
     .left-about{
+        display: grid;
         margin-left: 2rem;
         white-space: nowrap;
         /* tutaj wklej*/
-        position: relative;
+
+        text-align: center;
+
+        align-items: center;
+        justify-items: center;
         .few-words::before{
             background: #0f172a;
             animation: typewriter 1s ease forwards;
@@ -270,7 +276,7 @@ a{
         .paragraph-1{
             overflow: hidden;
             margin-top: 2rem;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             width: 100%;
             /* potrzebne do dzialania animacji*/
             white-space: nowrap;
@@ -280,8 +286,8 @@ a{
 
         }
         .paragraph-2{
-            margin-top: 1rem;
-            font-size: 1.5rem;
+            margin-top: 0.5rem;
+            font-size:  1.8rem;
             /* potrzebne do dzialania animacji*/
             white-space: nowrap;
             width: 100%;
@@ -291,8 +297,8 @@ a{
                     cursor .75s step-end infinite;
         }
         .paragraph-3{
-            margin-top: 1rem;
-            font-size: 1.5rem;
+            margin-top: 0.5rem;
+            font-size:  1.8rem;
             /* potrzebne do dzialania animacji*/
             white-space: nowrap;
             width: 100%;
@@ -302,8 +308,8 @@ a{
                     cursor .75s step-end infinite;
         }
         .paragraph-4{
-            margin-top: 1rem;
-            font-size: 1.5rem;
+            margin-top: 0.5rem;
+            font-size:  1.8rem;
             /* potrzebne do dzialania animacji*/
             white-space: nowrap;
             width: 100%;
@@ -313,8 +319,8 @@ a{
                     cursor .75s step-end infinite;
         }
         .paragraph-5{
-            margin-top: 1rem;
-            font-size: 1.5rem;
+            margin-top: 0.5rem;
+            font-size:  1.8rem;
             /* potrzebne do dzialania animacji*/
             white-space: nowrap;
             width: 100%;
@@ -335,6 +341,7 @@ a{
     width: 100%;
     font-size: 2.5rem;
     & h1 {
+        font-size: 3rem;
         position: relative;
 
     }
@@ -348,6 +355,8 @@ h6{
     text-align: center;
     margin: 10px;
 }
+
+
 .skills{
     width: 500px;
     margin: 0;
@@ -473,10 +482,13 @@ h6{
 
 .contact-content-container{
     display: flex;
-    padding-top: 3rem;
+    padding-top: 2rem;
     padding-left: 3.5rem;
     text-decoration: none;
     .left-contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         .contact-icons{
             .contact-icon{
                 padding: .8rem 1.1rem;
@@ -498,7 +510,7 @@ h6{
         flex: 2;
         font-size: 1.8rem;
         .socials{
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-top: 2rem;
         }
     }
@@ -536,4 +548,7 @@ h6{
         }
     }
 
+}
+.contact-details{
+    font-size: 2.2rem;
 }

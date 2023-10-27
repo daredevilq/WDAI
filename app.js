@@ -1,4 +1,24 @@
-const sections = document.querySelectorAll('.section');
+(function () {
+    [...document.querySelectorAll(".control")].forEach(button => {
+        button.addEventListener("click", function() {
+            document.querySelector(".active-btn").classList.remove("active-btn");
+            this.classList.add("active-btn");
+            document.querySelector(".active").classList.remove("active");
+            document.getElementById(button.dataset.id).classList.add("active");
+        })
+    });
+    document.querySelector(".theme-btn").addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+    })
+})();
+
+
+/* z jakiegos powodu kod do zmieniania sekcji nie dziala, znaczy dziala ale czasami
+*  z jakiegos powodu kolor sie zmienia a nie idzie za tym zmiana sekcji nie wiem jak to naprawic
+* wiec zmienilem na to co jest wyzej
+ */
+
+/*const sections = document.querySelectorAll('.section');
 const divButtons = document.querySelectorAll('.controls');
 const divButton = document.querySelectorAll('.control');
 const allSections = document.querySelector('.main-content');
@@ -35,5 +55,4 @@ function PageTransitions(){
 
 }
 
-PageTransitions();
-
+PageTransitions();*/
