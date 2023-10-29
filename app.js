@@ -14,7 +14,7 @@
 
 
 /* z jakiegos powodu kod do zmieniania sekcji nie dziala, znaczy dziala ale czasami
-*  z jakiegos powodu kolor sie zmienia a nie idzie za tym zmiana sekcji nie wiem jak to naprawic
+*   kolor sie zmienia a nie idzie za tym zmiana sekcji nie wiem jak to naprawic
 * wiec zmienilem na to co jest wyzej
  */
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDAI</title>
+    <title>Piotr Śmiałek</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -141,29 +141,30 @@
                             </div>
                         </div>
                         <div class="right-contact">
-                            <form action="" class="contact-form">
+                            <form  class="contact-form" id="form" method="get">
                                 <div class="input-control">
-                                    <label>
-                                        <input type="text" placeholder="Name" required>
+                                    <label for="name">
+                                        <input id="name" name="name" type="text" placeholder="Name" required>
                                     </label>
                                 </div>
                                 <div class="input-control">
                                     <label>
-                                        <input type="email" placeholder="Email" required>
+                                        <input id="email" type="email" placeholder="Email" required>
                                     </label>
                                 </div>
 
                                 <div class="input-control">
                                     <label>
-                                        <input type="text" placeholder="Title" required>
+                                        <input id="title" type="text" placeholder="Title" required>
                                     </label>
                                 </div>
                                 <div class="input-control">
-                                    <label for="">
-                                    </label><textarea name="" id="" cols="30" rows="8" placeholder="Message" required></textarea>
+                                    <label for="message">
+                                        <textarea name="message" id="message" cols="30" rows="8" placeholder="Message" required></textarea>
+                                    </label>
                                 </div>
                                 <div class="submit">
-                                    <button type="submit"> Submit Message</button>
+                                    <button type="submit">Submit Message</button>
                                 </div>
                             </form>
 

@@ -1,0 +1,550 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #57d9c6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: var(--color-white);
+    transition: all .4s ease-in-out;
+}
+:root{
+    --color-primary: #191d2b;
+    --color-secondary: #491dc2;
+    --color-white: #FFFFFF;
+    --box-shadow-1: 0 3px 15px rgba(0,0,0,0.7);
+}
+
+header{
+    color: var(--color-white);
+    height: 100vh;
+    overflow: hidden;
+}
+section{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 3rem 18rem;
+
+}
+a{
+    display: inline-block;
+    color: inherit;
+    font-family: inherit;
+}
+
+.section{
+    transform: translateY(-100%) scale(0);
+    transition: all .4s ease-in-out;
+    background-color: var(--color-primary);
+}
+
+.sec1{
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: #0f172a;
+}
+.sec2{
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: #0f172a;
+}
+
+.sec3{
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: rgb(28, 42, 203);
+
+}
+
+.sec4{
+    display: none;
+    transform: translateY(0) scale(1);
+
+
+}
+.sec5{
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: #0f172a;
+}
+
+.active{
+    display: block;
+    animation: scaleAnim 1s ease-in-out;}
+
+@keyframes scaleAnim{
+    0%{
+        transform: translateY(-100%) scaleY(0);
+    }
+    100%{
+        transform: translateY(0) scaleY(1);
+        }
+    }
+
+
+
+.controls{
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+    align-items: center;
+    .active-btn{
+        background-color: #57d9c6 !important;
+        transition: all .4s ease-in-out;
+        .i{
+            color: white;
+        }
+
+    }
+    .control{
+        padding: 1rem;
+        cursor: pointer;
+        width: 55px;
+        height: 55px;
+        margin: .7rem 0;
+        background-color: #122b39;
+        border-radius: 50%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        box-shadow: var(--box-shadow-1);
+
+    }
+}
+
+
+/* header */
+
+.header-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    width: 100%;
+    .left-header{
+        align-items: center;
+        display: flex;
+        position: relative;
+
+        .h-shape{
+            transition: .4s ease-in-out;
+            background-color: #57d9c6;
+            width: 65%;
+            height: 100%;
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            clip-path: polygon(0 0, 57% 0, 100% 100%, 0% 100%);
+        }
+        .image{
+            transition: .4s ease-in-out;
+            height: 90%;
+            width: 68%;
+            margin-left: 4rem;
+
+            & img {
+                display: flex;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: all .4s ease-in-out;
+                filter: grayscale(100%);
+                border-radius: 14px;
+            }
+
+        }
+
+    }
+    .right-header{
+        display: flex;
+        padding-right: 10rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    .text{
+        line-height: 2rem;
+    }
+        .main-btn{
+            padding: .8rem 1.1rem;
+            background-color: #57d9c6;
+            border-radius: 20rem;
+            font-family: inherit;
+            width: 10rem;
+            margin-top: 1rem;
+            text-underline-mode: none;
+            text-underline: none;
+            text-decoration: none;
+        }
+
+    .name{
+        font-size: 2rem;
+        border-right: 5px solid;
+        /* potrzebne do dzialania animacji*/
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;
+
+        animation:
+            typing 3.5s,
+            cursor .75s step-end infinite;
+        }
+    }
+}
+
+@keyframes cursor {
+    50%{ border-color: transparent; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+}
+
+
+/* about */
+#about{
+    padding: 0;
+}
+
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 10vh;
+    padding-bottom: 0;
+    .right-about{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        .my-skills-header{
+            font-size: 2rem;
+        }
+        .skills{
+            padding-top: 0;
+        }
+
+    }
+
+
+
+}
+
+
+
+    .left-about{
+        display: grid;
+        margin-left: 2rem;
+        white-space: nowrap;
+
+        text-align: center;
+
+        align-items: center;
+        justify-items: center;
+        .few-words::before{
+            background: #0f172a;
+            animation: typewriter 1s ease forwards;
+        }
+        .few-words{
+            font-size: 2.2rem;
+            position: relative;
+
+
+        }
+
+        .few-words::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        @keyframes typewriter {
+            to {left: 100%}
+        }
+
+        .paragraph-1{
+            overflow: hidden;
+            margin-top: 2rem;
+            font-size: 1.8rem;
+            width: 100%;
+
+            white-space: nowrap;
+            animation:
+                    typing 3.5s,
+                    cursor .75s step-end infinite;
+
+        }
+        .paragraph-2{
+            margin-top: 0.5rem;
+            font-size:  1.8rem;
+
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            animation:
+                    typing 3.5s,
+                    cursor .75s step-end infinite;
+        }
+        .paragraph-3{
+            margin-top: 0.5rem;
+            font-size:  1.8rem;
+
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            animation:
+                    typing 3.5s,
+                    cursor .75s step-end infinite;
+        }
+        .paragraph-4{
+            margin-top: 0.5rem;
+            font-size:  1.8rem;
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            animation:
+                    typing 3.5s,
+                    cursor .75s step-end infinite;
+        }
+        .paragraph-5{
+            margin-top: 0.5rem;
+            font-size:  1.8rem;
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            animation:
+                    typing 3.5s,
+                    cursor .75s step-end infinite;
+        }
+
+    }
+
+
+
+.main-title{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 2.5rem;
+    & h1 {
+        font-size: 3rem;
+        position: relative;
+
+    }
+}
+
+h5{
+    text-align: center;
+}
+
+h6{
+    text-align: center;
+    margin: 10px;
+}
+
+
+.skills{
+    width: 500px;
+    margin: 0;
+    padding: 15px;
+    color: #FFF;
+}
+.skills ul {
+    list-style: none;
+}
+.skills li{
+    margin: 20px 0;
+    padding: 10px;
+
+}
+.bar{
+    background: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgb(0,0,0,0.25), 0 10px 10px rgb(0,0,0,0.22);
+    transition: all .04s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.bar:hover{
+    box-shadow: 0 14px 28px rgb(0,0,0,0.25), 0 10px 10px rgb(0,0,0,0.22);
+}
+.bar span{
+    height: 20px ;
+    float: left;
+    background: linear-gradient(135deg, rgba(6, 38, 34,1)0%, rgba(87,217,198,1)100%);
+
+}
+.Git{
+    width: 90%;
+    animation: git 3s;
+}
+.HTML{
+    width: 80%;
+    animation: html 3s;
+}
+.CSS{
+    width: 60%;
+    animation: css 3s;
+}
+.JavaScript{
+    width: 55%;
+    animation: javascript 3s;
+}
+.Java{
+    width: 75%;
+    animation: java 3s;
+}
+.Python {
+    width: 92%;
+    animation: python 3s;
+}
+
+@keyframes html {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 80%;
+    }
+}
+@keyframes git {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 90%;
+    }
+}
+@keyframes css {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 60%;
+    }
+}
+@keyframes javascript {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 55%;
+    }
+}
+@keyframes java {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 75%;
+    }
+}
+@keyframes python {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 92%;
+    }
+}
+
+/* contact*/
+
+#contact{
+    padding: 0;
+}
+
+.contact-container{
+    .main-title {
+        & h1 {
+            font-size: 3rem;
+        }
+    }
+    font-size: 1rem;
+}
+
+.contact-content-container{
+    display: flex;
+    padding-top: 2rem;
+    padding-left: 3.5rem;
+    text-decoration: none;
+    .left-contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .contact-icons{
+            .contact-icon{
+                padding: .8rem 1.1rem;
+                background-color: #57d9c6;
+                border-radius: 20rem;
+                font-family: inherit;
+                width: 12rem;
+                margin-top: 2rem;
+                text-underline-mode: none;
+                text-underline: none;
+                text-decoration: none;
+                .social-icon{
+                    text-decoration: none;
+                    align-items: center;
+                }
+
+            }
+        }
+        flex: 2;
+        font-size: 1.8rem;
+        .socials{
+            font-size: 1.8rem;
+            margin-top: 2rem;
+        }
+    }
+
+    .right-contact{
+        flex: 3;
+        margin-left: 3rem ;
+        margin-right: 6rem;
+
+
+        .contact-form {
+            .input-control {
+                margin: 1.5rem;
+                & input, & textarea {
+                    width: 20rem;
+                    font-family: inherit;
+                    border-radius: 15px;
+                    font-weight: inherit;
+                    padding: .8rem 1.1rem;
+                    background-color: #474d5b;
+                    outline: none;
+                    border: none;
+                    color: white;
+                    resize: none;
+
+                }
+
+            }
+            .submit button{
+                padding: .8rem 1.1rem;
+                background-color: #57d9c6;
+                border-radius: 20rem;
+                font-family: inherit;
+            }
+        }
+    }
+
+}
+.contact-details{
+    font-size: 2.2rem;
+}

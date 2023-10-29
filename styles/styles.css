@@ -64,7 +64,7 @@ a{
 .sec4{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: rgb(175, 22, 99);
+
 
 }
 .sec5{
@@ -128,6 +128,7 @@ a{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 100%;
+    width: 100%;
     .left-header{
         align-items: center;
         display: flex;
@@ -242,7 +243,6 @@ a{
         display: grid;
         margin-left: 2rem;
         white-space: nowrap;
-        /* tutaj wklej*/
 
         text-align: center;
 
@@ -254,7 +254,6 @@ a{
         }
         .few-words{
             font-size: 2.2rem;
-            /* potrzebne do dzialania animacji*/
             position: relative;
 
 
@@ -278,7 +277,7 @@ a{
             margin-top: 2rem;
             font-size: 1.8rem;
             width: 100%;
-            /* potrzebne do dzialania animacji*/
+
             white-space: nowrap;
             animation:
                     typing 3.5s,
@@ -288,7 +287,7 @@ a{
         .paragraph-2{
             margin-top: 0.5rem;
             font-size:  1.8rem;
-            /* potrzebne do dzialania animacji*/
+
             white-space: nowrap;
             width: 100%;
             overflow: hidden;
@@ -299,7 +298,7 @@ a{
         .paragraph-3{
             margin-top: 0.5rem;
             font-size:  1.8rem;
-            /* potrzebne do dzialania animacji*/
+
             white-space: nowrap;
             width: 100%;
             overflow: hidden;
@@ -310,7 +309,6 @@ a{
         .paragraph-4{
             margin-top: 0.5rem;
             font-size:  1.8rem;
-            /* potrzebne do dzialania animacji*/
             white-space: nowrap;
             width: 100%;
             overflow: hidden;
@@ -321,7 +319,6 @@ a{
         .paragraph-5{
             margin-top: 0.5rem;
             font-size:  1.8rem;
-            /* potrzebne do dzialania animacji*/
             white-space: nowrap;
             width: 100%;
             overflow: hidden;
@@ -362,7 +359,6 @@ h6{
     margin: 0;
     padding: 15px;
     color: #FFF;
-    /*box-shadow: 0 14px 28px rgb(0,0,0,0.25), 0 10px 10px rgb(0,0,0,0.22);*/
 }
 .skills ul {
     list-style: none;
