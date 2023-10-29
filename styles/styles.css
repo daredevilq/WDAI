@@ -217,7 +217,7 @@ a{
 .about-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 0;
+    padding-top: 10vh;
     padding-bottom: 0;
     .right-about{
         display: grid;
